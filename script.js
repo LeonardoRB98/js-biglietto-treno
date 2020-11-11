@@ -11,13 +11,17 @@ console.log(totalNoDiscount);
 // va applicato uno sconto del 20% per i minorenni;
 // va applicato uno sconto del 40% per gli over 65.
 if (age < 18) {
-  totalNoDiscount = (totalNoDiscount * 20) / 100;
-  console.log(totalNoDiscount);
+  var discount = (totalNoDiscount * 20) / 100;
+  console.log(discount);
+  var total = totalNoDiscount - discount;
+  console.log(total)
 } else if (age > 65) {
-  totalNoDiscount = (totalNoDiscount * 40) / 100;
-  console.log(totalNoDiscount);
+  discount = (totalNoDiscount * 40) / 100;
+  console.log(discount);
+  var total = totalNoDiscount - discount;
+  console.log(total)
 }
 else {
 
 }
-document.getElementById('prezzo_biglietto').innerHTML = totalNoDiscount;
+document.getElementById('prezzo_biglietto').innerHTML = total;
